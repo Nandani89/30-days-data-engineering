@@ -1,0 +1,160 @@
+📂 Day 2 – File Handling & Crontab (70 Commands)
+🔹 File & Directory Handling (55 commands)
+📄 File Creation & Viewing
+
+touch file.txt → create empty file
+
+cat file.txt → view file content
+
+more file.txt → view with pagination
+
+less file.txt → view file with scroll
+
+head file.txt → first 10 lines
+
+tail file.txt → last 10 lines
+
+tail -f logfile.log → live monitoring
+
+nano file.txt → open file in nano editor
+
+vi file.txt → open file in vi editor
+
+echo "Hello" > file.txt → write text to file
+
+echo "World" >> file.txt → append text to file
+
+stat file.txt → file details (size, permissions, etc.)
+
+📁 Directory Operations
+
+pwd → show current directory
+
+ls → list files
+
+ls -l → list with details
+
+ls -a → show hidden files
+
+ls -lh → list in human-readable sizes
+
+cd dir → go inside directory
+
+cd .. → go up one level
+
+mkdir mydir → create directory
+
+mkdir -p a/b/c → create nested dirs
+
+rmdir mydir → remove empty directory
+
+rm -r mydir → remove non-empty directory
+
+📦 Copying, Moving, Deleting
+
+cp file1.txt file2.txt → copy file
+
+cp -r dir1 dir2 → copy directory
+
+mv file1.txt newname.txt → rename file
+
+mv file1.txt /path/ → move file
+
+rm file.txt → delete file
+
+rm -f file.txt → force delete
+
+🔍 Searching & Filtering
+
+find . -name file.txt → find file by name
+
+find / -type d -name logs → find directory
+
+grep "error" file.txt → search text in file
+
+grep -i "error" file.txt → case-insensitive search
+
+grep -r "error" . → recursive search in directory
+
+grep -n "error" file.txt → show line numbers
+
+📊 File Content Processing
+
+wc file.txt → count lines, words, chars
+
+wc -l file.txt → count lines only
+
+wc -w file.txt → count words
+
+wc -c file.txt → count characters
+
+sort file.txt → sort file content
+
+sort -r file.txt → reverse sort
+
+uniq file.txt → remove duplicates
+
+uniq -c file.txt → count duplicate occurrences
+
+cut -d',' -f1 file.csv → cut first column
+
+cut -c1-5 file.txt → extract first 5 characters
+
+tr 'a-z' 'A-Z' < file.txt → convert to uppercase
+
+tr -d 'a' < file.txt → remove all a
+
+split -l 10 file.txt newfile → split into parts of 10 lines
+
+cmp file1.txt file2.txt → compare files
+
+diff file1.txt file2.txt → show file differences
+
+🔐 Permissions & Ownership
+
+ls -l → check permissions
+
+chmod 644 file.txt → set read/write
+
+chmod +x script.sh → make file executable
+
+chown user file.txt → change file owner
+
+chgrp group file.txt → change file group
+
+⏰ Crontab & Scheduling (15 commands)
+📋 Crontab Basics
+
+crontab -e → edit crontab
+
+crontab -l → list crontab jobs
+
+crontab -r → remove crontab
+
+crontab -u username -l → check another user’s jobs
+
+🕒 Cron Job Timing Examples
+
+* * * * * echo "Hello" >> cron.log → run every minute
+
+0 * * * * echo "Hourly task" >> cron.log → run hourly
+
+0 0 * * * echo "Daily task" >> cron.log → run daily
+
+0 0 * * 0 echo "Weekly task" >> cron.log → run weekly
+
+0 0 1 * * echo "Monthly task" >> cron.log → run monthly
+
+0 6 * * 1-5 echo "Weekdays 6AM task" >> cron.log
+
+📑 Special Cron Operators
+
+@reboot echo "Run after reboot" >> cron.log
+
+@hourly echo "Run every hour" >> cron.log
+
+@daily echo "Run daily" >> cron.log
+
+@weekly echo "Run weekly" >> cron.log
+
+@monthly echo "Run monthly" >> cron.log
